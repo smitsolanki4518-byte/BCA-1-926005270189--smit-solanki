@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>student profile</title>
-</head>
+<html>
 <body>
-    <h2>student details</h2>
-    <ul>
-        <li><b>Name:</b> smit solanki</li>
-        <li><b>City:</b> Rajkot</li>
-        <li><b>stream:</b>BCA</li>
-        <li><b>class:</b> BCA- A</li>
-        <li><b>Email:</b> smitsolanki@gmail.com</li>
-        <li><b>Gender:</b> male</li>
 
-    </ul>
+    <h2>Even or Odd Checker</h2>
+    <input type="number" id="num" placeholder="Enter a number">
+    <button onclick="check()">Check</button>
+    <h3 id="res"></h3>
+
+    <script>
+        function check() {
+            let n = document.getElementById("num").value;
+            let output = document.getElementById("res");
+
+            if (n === "") {
+                output.innerText = "Enter a number!";
+            } else if (n % 2 === 0) {
+                output.innerText = n + " is Even";
+            } else {
+                output.innerText = n + " is Odd";
+            }
+        }
+    </script>
+
 </body>
 </html>
